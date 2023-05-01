@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Portfolio Website - Yang</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="images/logo2.png" class ="logo" alt="name logo">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <p>Computer Science WIT '24</p>
+                    <h1>Hi, I'm <span>Darrian Yang</span><br>Boston, MA</h1>
+                </div>
+            </div>
+        </div>
+        <!-- -----------about--------- -->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/marathon.jpg" alt="marathon pic">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>Here will be some information about myself including my interests and a quick overview of who I am and what I do.</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>UI/UX</span><br>Designing Mobile Applications</li>
+                                <li><span>App Development</span><br>Building iOS and Android Apps</li>
+                                <li><span>Web Development</span><br>Building Web Applications</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>Nothing Yet!</span><br>Empty</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2016-2020</span><br>Dracut Senior High School</li>
+                                <li><span>2020-2024</span><br>BCOS @ WIT Boston, MA</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+
+            }
+
+
+        </script>
+
+    </body>
+</html>
