@@ -9,6 +9,8 @@
   <li>JS</li>
   </ul>
 
-![image](https://user-images.githubusercontent.com/101906429/235487013-a82fda18-fece-45c6-9166-3ad57c2f741e.png)
-![image](https://user-images.githubusercontent.com/101906429/235487306-5f73fb44-ca48-44d3-b825-6dc6e8d66934.png)
+![image](<img width="1243" alt="Screenshot 2023-06-22 at 10 28 45 AM" src="https://github.com/DarrianYang/PortfolioWebsiteYang/assets/101906429/477c318c-187f-45d0-8632-80e23715c95b">
+)
+![image](<img width="1305" alt="Screenshot 2023-06-22 at 10 29 02 AM" src="https://github.com/DarrianYang/PortfolioWebsiteYang/assets/101906429/3505559b-9be8-4a16-a3ce-90d0a37e28bc">
+)
 
