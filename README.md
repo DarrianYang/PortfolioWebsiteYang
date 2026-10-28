@@ -1,16 +1,29 @@
-<h1 align="center">Personal Portfolio Website</h1> 
-<h2 align="center">Darrian Yang</h2>
+# Darrian Yang — Portfolio
 
-<p align="center">This will be a work in progress that will be worked on throughout the summer of 2023.</p>
-<h3>Coding Stack: </h3>
-<ul>
-  <li>HTML</li>
-  <li>CSS</li>
-  <li>JS</li>
-  </ul>
+Personal site for [darrianyang.com](https://darrianyang.com). Built so employers can read experience on the page and open the resume as a PDF.
 
-![image](https://github.com/DarrianYang/PortfolioWebsiteYang/assets/101906429/477c318c-187f-45d0-8632-80e23715c95b>
-)
-![image](https://github.com/DarrianYang/PortfolioWebsiteYang/assets/101906429/3505559b-9be8-4a16-a3ce-90d0a37e28bc>
-)
+## Stack
 
+- [Next.js](https://nextjs.org/) (App Router, static export)
+- TypeScript
+- React 19
+- Tailwind CSS
+
+## Local development
+
+Requires Node.js 20+.
+
+```bash
+npm install
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000). The resume lives at `/resume` and `public/resume.pdf`.
+
+## Production build
+
+```bash
+npm run build
+```
+
+This writes a static site to `out/`, which GitHub Pages deploys from `.github/workflows/deploy.yml`. In the GitHub repo, set **Pages → Source** to **GitHub Actions**.
