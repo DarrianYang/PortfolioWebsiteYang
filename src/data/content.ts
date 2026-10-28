@@ -9,7 +9,7 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/darrianyang",
   resumePath: "/resume.pdf",
   summary:
-    "Robotics infrastructure engineer supporting production robotics systems and vision container deployments to Walmart customer sites. Experienced with Ubuntu, Python, shell scripting, MLOps change requests, post-deployment checks, and production troubleshooting. Skilled in RHEL systems administration, telemetry analysis (SQL, Tableau), production triage, and operational hardening. Prior U.S. Secret Clearance.",
+    "Infrastructure engineer supporting distributed robotics infrastructure, production Linux environments, and software deployments to commercial customer sites. At Symbotic, I support robotic warehouse systems, troubleshoot hardware and software faults, and develop Python tools for operational recovery. Experienced with vision container deployments to Walmart sites through the MLOps Change Request process and post-deployment validation.",
 };
 
 export const nav = [
@@ -27,11 +27,11 @@ export const experience = [
     role: "Robotics Infrastructure Engineer II",
     dates: "August 2025 – Present",
     bullets: [
-      "Continue to support vision container deployments to Walmart customer sites using Ubuntu, Python, and shell scripts, coordinating changes with the MLOps team through the CR process.",
-      "Run post-deployment checks that identify robots with failed vision container updates; review command-line output and logs to verify results.",
-      "Support production robotics infrastructure and teleoperations across automated warehouse sites, troubleshooting issues and coordinating recovery.",
-      "Analyze operational data in SQL and Tableau to identify recurring issues, performance trends, and areas for improvement.",
-      "Maintain SOPs and escalation guidance in Confluence and track engineering issues and operational work in Jira.",
+      "Support periodic vision container deployments to Walmart customer sites using Ubuntu Linux, Python, and shell scripts, coordinating production changes with the MLOps team through the Change Request (CR) process.",
+      "Run post-deployment script checks to identify robots with failed vision container updates and review command-line logs to verify deployment results.",
+      "Own robotics infrastructure support, teleoperations, and recovery procedures across distributed automated warehouse installations.",
+      "Monitor production systems and analyze SQL, Tableau, and Sankey data to identify recurring faults, performance trends, and operational bottlenecks.",
+      "Maintain Python-based support tools, technical runbooks, and escalation procedures; document and track operational issues in Confluence and Jira.",
     ],
   },
   {
@@ -41,9 +41,9 @@ export const experience = [
     dates: "August 2024 – August 2025",
     bullets: [
       "Executed overnight vision container deployments to Walmart customer sites using Ubuntu Linux, Python, and shell scripts through the MLOps change request process.",
-      "Monitored deployments and reviewed script output to identify robots requiring follow-up after software updates.",
-      "Supported robotics troubleshooting and recovery at production warehouse sites, using operational data and logs to investigate issues.",
-      "Worked with engineering teams on production issues, tooling updates, documentation, and process improvements.",
+      "Checked deployment script output and logs to identify robots with failed updates and flag systems requiring follow-up.",
+      "Supported multi-site robotic warehouse infrastructure through production monitoring, fault isolation, and recovery of hardware and software issues.",
+      "Collaborated with software and operations teams on production troubleshooting, tooling updates, and operational improvements.",
     ],
   },
   {
@@ -52,8 +52,8 @@ export const experience = [
     role: "System Administrator Co-Op (Group 92)",
     dates: "September 2023 – January 2024",
     bullets: [
-      "Deployed an internal web application on Red Hat Enterprise Linux 9 using Node.js, Express, React, and MySQL.",
-      "Built REST API endpoints and configured SSL certificates for secure application access.",
+      "Provisioned and configured a Red Hat Enterprise Linux 9 virtual machine to host an internal web application using Node.js, Express, React, and MySQL.",
+      "Configured REST API endpoints and SSL/TLS certificates for secure application access.",
       "Supported OS patching, system imaging, hardware troubleshooting, and workstation deployments.",
       "Held a U.S. Secret security clearance during the co-op.",
     ],
@@ -62,45 +62,28 @@ export const experience = [
 
 export const skillGroups = [
   {
-    label: "Operating systems",
-    items: ["Ubuntu Linux", "Red Hat Enterprise Linux", "CentOS", "Windows", "SSH"],
+    label: "Systems & OS administration",
+    items: ["Ubuntu Linux", "RHEL 8/9", "CentOS", "Windows", "SSH", "System monitoring"],
   },
   {
-    label: "Scripting & deployment",
-    items: [
-      "Python",
-      "Bash / shell",
-      "Vision container deployments",
-      "Change request (CR) process",
-    ],
+    label: "Scripting & tooling",
+    items: ["Python", "Automation scripts", "Internal support utilities", "GUI tools", "Bash / shell", "REST APIs", "Power Automate"],
   },
   {
-    label: "Testing & monitoring",
-    items: [
-      "Post-deployment checks",
-      "Command-line logs",
-      "Failure identification",
-      "Robotics monitoring",
-      "Tableau",
-    ],
+    label: "Infrastructure & reliability",
+    items: ["Distributed robotics monitoring", "Production troubleshooting", "Incident escalation", "Recovery workflows"],
   },
   {
-    label: "Engineering tools",
-    items: ["Jira", "Confluence", "Git", "GitHub", "SQL", "Power Automate"],
+    label: "Deployment & validation",
+    items: ["Vision container deployments", "Change request (CR) process", "Post-deployment checks", "Command-line log review"],
   },
   {
-    label: "Robotics operations",
-    items: [
-      "Production troubleshooting",
-      "Teleoperations",
-      "Incident response",
-      "SOPs",
-      "Cross-team coordination",
-    ],
+    label: "Observability & telemetry",
+    items: ["SQL", "Tableau dashboards", "Sankey workflow analysis", "Cloud UI monitoring consoles"],
   },
   {
-    label: "Additional",
-    items: ["REST APIs", "MySQL", "Node.js", "React", "Microsoft Teams", "SharePoint"],
+    label: "Platforms & toolsets",
+    items: ["Git", "GitHub", "Jira", "Confluence", "MySQL", "SharePoint", "Microsoft Teams"],
   },
 ];
 

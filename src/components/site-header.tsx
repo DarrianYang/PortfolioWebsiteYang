@@ -8,13 +8,13 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#07090c]/80 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-line bg-background/95 backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4 sm:px-8">
         <Link href="/" className="group flex items-center gap-3">
-          <span className="grid h-9 w-9 place-items-center rounded-md border border-teal-400/30 bg-teal-400/10 font-mono text-xs font-semibold tracking-tight text-teal-300">
+          <span className="grid h-9 w-9 place-items-center rounded-md border border-line bg-sage font-sans text-xs font-semibold tracking-tight text-accent">
             DY
           </span>
-          <span className="text-sm font-medium text-zinc-200 group-hover:text-white">
+          <span className="text-sm font-medium text-ink group-hover:text-accent">
             {profile.name}
           </span>
         </Link>
@@ -24,14 +24,15 @@ export function SiteHeader() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm text-zinc-400 transition-colors hover:text-white"
+              className="nav-link text-sm text-body transition-colors hover:text-accent"
             >
               {item.label}
             </Link>
           ))}
           <a
             href={profile.resumePath}
-            className="rounded-full bg-teal-300 px-4 py-2 text-sm font-medium text-zinc-950 transition-colors hover:bg-white"
+            download
+            className="rounded-md bg-accent px-4 py-2 text-sm font-medium text-cream transition-colors hover:bg-accent-dark"
           >
             Download PDF
           </a>
@@ -39,7 +40,7 @@ export function SiteHeader() {
 
         <button
           type="button"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/10 text-zinc-200 md:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-line text-ink md:hidden"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           onClick={() => setOpen((value) => !value)}
@@ -54,13 +55,13 @@ export function SiteHeader() {
       </div>
 
       {open ? (
-        <div className="border-t border-white/10 px-5 py-4 md:hidden">
+        <div className="border-t border-line px-5 py-4 md:hidden">
           <nav className="flex flex-col gap-3">
             {nav.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-base text-zinc-300"
+                className="text-base text-body"
                 onClick={() => setOpen(false)}
               >
                 {item.label}
@@ -68,7 +69,8 @@ export function SiteHeader() {
             ))}
             <a
               href={profile.resumePath}
-              className="mt-2 inline-flex w-fit rounded-full bg-teal-300 px-4 py-2 text-sm font-medium text-zinc-950"
+              download
+              className="mt-2 inline-flex w-fit rounded-md bg-accent px-4 py-2 text-sm font-medium text-cream"
             >
               Download PDF
             </a>

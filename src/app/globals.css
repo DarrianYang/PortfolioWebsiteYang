@@ -1,20 +1,30 @@
 @import "tailwindcss";
 
 :root {
-  --background: #07090c;
-  --foreground: #e8edf2;
-  --accent: #5eead4;
+  --background: #f4eee3;
+  --foreground: #352d25;
+  --accent: #4e6344;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-ink: #352d25;
+  --color-body: #605342;
+  --color-muted: #776854;
+  --color-accent: var(--accent);
+  --color-accent-dark: #3b4e33;
+  --color-cream: #fffaf1;
+  --color-surface: #ece3d4;
+  --color-sage: #e1e5d5;
+  --color-line: #d4c6b1;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 html {
   scroll-behavior: smooth;
+  color-scheme: light;
 }
 
 body {
@@ -23,7 +33,209 @@ body {
   font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
 }
 
+h1, h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+}
+
 ::selection {
-  background: color-mix(in srgb, var(--accent) 35%, transparent);
-  color: white;
+  background: #d2dcc5;
+  color: #352d25;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 5px;
+}
+
+a, button {
+  transition: color 180ms ease, background-color 180ms ease,
+    border-color 180ms ease, transform 180ms ease;
+}
+
+.hero-name {
+  color: var(--foreground);
+  line-height: 1.08;
+  padding-bottom: 0.08em;
+}
+
+.hero-intro, .portrait-frame {
+  animation: arrive 600ms ease-out both;
+}
+
+.portrait-frame {
+  padding: 12px;
+  background: #e4d7c4;
+  border: 1px solid #d4c6b1;
+  border-radius: 3px;
+  box-shadow: 6px 8px 0 #d6c3a54d;
+  transform: rotate(2deg);
+}
+
+.portrait-frame img {
+  filter: saturate(0.85);
+}
+
+.experience-entry::before {
+  content: "";
+  position: absolute;
+  left: -4px;
+  top: 4px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.skill-card, .project-card {
+  transition: border-color 200ms ease, background-color 200ms ease;
+}
+
+.skill-item:not(:last-child)::after {
+  content: " /";
+  margin-left: 0.65rem;
+  color: #94826a;
+}
+
+.project-card {
+  background: #eee5d7;
+  border-left: 3px solid #8b9a73;
+}
+
+.contact-card {
+  background: #e3e6d7;
+}
+
+@media (hover: hover) {
+  .skill-card:hover, .project-card:hover {
+    border-color: #9b9f81;
+    background-color: #e8e1d2;
+  }
+
+  .primary-button:hover {
+    transform: translateY(-1px);
+    background: #3b4e33;
+  }
+}
+
+@keyframes arrive {
+  from { opacity: 0; translate: 0 8px; }
+  to { opacity: 1; translate: 0 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .primary-button:hover { transform: none; }
+}
+
+/* Small, tactile details to match the paper-and-photo palette. */
+.portrait-frame {
+  transition: transform 350ms ease, box-shadow 350ms ease;
+}
+
+.skill-card, .project-card {
+  transition: transform 220ms ease, box-shadow 220ms ease,
+    border-color 220ms ease, background-color 220ms ease;
+}
+
+.primary-button span {
+  display: inline-block;
+  transition: transform 200ms ease;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  border-radius: 50%;
+  background: #9a7850;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 200ms ease;
+}
+
+.nav-link:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.primary-button:active, .leaf-button:active {
+  transform: translateY(1px);
+}
+
+.autumn-detail {
+  position: relative;
+}
+
+.leaf-button svg {
+  width: 23px;
+  height: 23px;
+  color: #987044;
+  transition: transform 250ms ease;
+}
+
+.leaf-scatter {
+  position: absolute;
+  pointer-events: none;
+  inset: auto 0 100%;
+  height: 150px;
+  overflow: hidden;
+}
+
+.leaf-scatter span {
+  position: absolute;
+  top: 0;
+  left: calc(8% + var(--leaf) * 17%);
+  width: 22px;
+  color: #987044;
+  opacity: 0;
+  animation: leaf-fall 1800ms ease-in calc(var(--leaf) * 100ms) both;
+}
+
+.leaf-scatter span:nth-child(even) { color: #65754c; }
+
+@media (hover: hover) {
+  .portrait-frame:hover {
+    transform: rotate(-1deg) translateY(-3px);
+    box-shadow: 9px 12px 0 #d6c3a54d;
+  }
+
+  .skill-card:hover, .project-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 3px 5px 0 #d4c6b138;
+  }
+
+  .nav-link:hover::after { transform: scaleX(1); }
+  .primary-button:hover span { transform: translate(2px, -2px); }
+  .leaf-button:hover svg { transform: rotate(-20deg); }
+  .experience-entry:hover::before { background: #987044; }
+}
+
+@keyframes leaf-fall {
+  0% { opacity: 0; transform: translate(0, -15px) rotate(0deg); }
+  15% { opacity: 1; }
+  75% { opacity: 0.9; }
+  100% { opacity: 0; transform: translate(12px, 145px) rotate(160deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portrait-frame:hover { transform: rotate(2deg); }
+  .skill-card:hover, .project-card:hover, .primary-button:hover span,
+  .leaf-button:hover svg, .primary-button:active, .leaf-button:active {
+    transform: none;
+  }
+  .leaf-scatter span {
+    opacity: 0.7;
+    top: calc(15px + var(--leaf) * 20px);
+  }
 }
