@@ -120,3 +120,25 @@ html[data-theme="dark"] .bg-accent { color: #102522; }
 .outside-work-tags { display: flex; flex-wrap: wrap; gap: .6rem; }
 .outside-work-tags span { padding: .5rem .75rem; border: 1px solid var(--line); background: var(--surface); color: var(--body-text); font-size: .875rem; }
 @media (max-width: 768px) { .outside-work-content { grid-template-columns: 1fr; } }
+
+.gallery-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; margin-top: 2.5rem; }
+.gallery-item { min-width: 0; background: var(--surface); border: 1px solid var(--line); }
+.gallery-item a { display: block; overflow: hidden; }
+.gallery-item img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: center 35%; transition: transform 250ms ease; }
+.gallery-item figcaption { padding: .85rem 1rem; color: var(--body-text); font-size: .875rem; font-weight: 600; }
+@media (hover: hover) { .gallery-item a:hover img { transform: scale(1.03); } }
+@media (max-width: 640px) { .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; } .gallery-item img { aspect-ratio: 3 / 4; } }
+@media (prefers-reduced-motion: reduce) { .gallery-item a:hover img { transform: none; } }
+.gallery-item button { display: block; width: 100%; overflow: hidden; cursor: pointer; }
+@media (hover: hover) { .gallery-item button:hover img { transform: scale(1.03); } }
+@media (prefers-reduced-motion: reduce) { .gallery-item button:hover img { transform: none; } }
+.gallery-dialog { position: fixed; inset: 0; margin: auto; max-width: min(92vw, 900px); max-height: 94dvh; padding: 0; border: 1px solid var(--line); background: var(--surface); color: var(--ink); }
+.gallery-dialog::backdrop { background: #071412d9; }
+.gallery-modal { display: flex; flex-direction: column; max-height: 94dvh; }
+.gallery-modal-header, .gallery-modal-controls { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .75rem 1rem; }
+.gallery-modal-header p { font-weight: 600; }
+.gallery-modal-header p span { margin-left: .75rem; color: var(--muted); font-size: .875rem; font-weight: 400; }
+.gallery-modal-header button { width: 2.5rem; height: 2.5rem; font-size: 1.75rem; line-height: 1; cursor: pointer; }
+.gallery-modal-image { display: block; width: auto; max-width: 100%; min-height: 0; height: auto; max-height: 72dvh; object-fit: contain; align-self: center; }
+.gallery-modal-controls button { min-height: 2.75rem; padding: .5rem 1rem; border: 1px solid var(--line); cursor: pointer; }
+.gallery-modal-controls button:hover, .gallery-modal-header button:hover { color: var(--accent); }

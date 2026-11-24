@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { PhotoGallery } from "@/components/photo-gallery";
 import {
   education,
   experience,
@@ -216,6 +217,7 @@ export default function Home() {
             <span>Spartan races</span><span>Marathons</span><span>Half marathons</span><span>Fishing</span>
           </div>
         </div>
+        <PhotoGallery />
       </section>
 
       <section className="contact-card mt-4 rounded-xl border border-line p-7 sm:p-10">
