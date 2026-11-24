@@ -17,13 +17,11 @@ export default function Home() {
     <div className="mx-auto max-w-6xl px-5 pb-24 sm:px-8">
       <section className="hero grid items-center gap-12 py-16 md:grid-cols-[1.15fr_0.85fr] md:py-24">
         <div className="hero-intro">
-          <p className="mb-5 text-sm text-muted">
-            {profile.company} · {profile.location}
-          </p>
+          <p className="hero-eyebrow mb-5 text-sm">ROBOTICS / INFRASTRUCTURE / OPERATIONS</p>
           <h1 className="hero-name max-w-3xl text-5xl tracking-tight sm:text-7xl">
             {profile.name}
           </h1>
-          <p className="mt-3 text-lg text-accent sm:text-xl">{profile.title}</p>
+          <p className="hero-role mt-4 text-lg sm:text-xl">{profile.title} <span>at {profile.company}</span></p>
           <p className="mt-6 max-w-2xl text-base leading-7 text-body sm:text-lg">
             {profile.summary}
           </p>
@@ -32,7 +30,7 @@ export default function Home() {
               href="/resume/"
               className="primary-button rounded-md bg-accent px-5 py-2.5 text-sm font-medium text-cream hover:bg-accent-dark"
             >
-              Read resume <span aria-hidden="true">↗</span>
+              Read resume
             </Link>
             <a
               href={profile.resumePath}
@@ -61,6 +59,7 @@ export default function Home() {
           </div>
         </div>
         <div className="portrait-frame relative mx-auto w-full max-w-sm">
+          <span className="portrait-coordinates" aria-hidden="true">SYSTEMS<br />IN MOTION</span>
           <Image
             src="/images/portrait.jpg"
             alt={`${profile.name} headshot`}
@@ -72,17 +71,29 @@ export default function Home() {
         </div>
       </section>
 
+      <div className="systems-visual" aria-hidden="true">
+        <div className="systems-visual-label">ROBOTICS OPERATIONS <span> / </span> SYSTEMS VIEW</div>
+        <svg viewBox="0 0 1000 120" preserveAspectRatio="none" fill="none">
+          <path d="M0 85H115L155 45H310L350 85H510L555 40H720L765 85H1000" />
+          <path className="systems-secondary" d="M0 105H205L245 65H420L460 105H680L720 65H1000" />
+          <circle cx="155" cy="45" r="6" /><circle cx="350" cy="85" r="6" /><circle cx="555" cy="40" r="6" /><circle cx="765" cy="85" r="6" />
+        </svg>
+      </div>
+      <div className="focus-ribbon" aria-label="Areas of focus">
+        <span>01 <b>Robotics infrastructure</b></span><span>02 <b>Linux systems</b></span><span>03 <b>Operational leadership</b></span><span>04 <b>Automation &amp; tooling</b></span>
+      </div>
+
       <section id="about" className="scroll-mt-24 border-t border-line py-16">
         <SectionLabel title="About" />
         <div className="grid gap-8 lg:grid-cols-3">
           <p className="text-lg leading-8 text-body lg:col-span-2">
-            I keep distributed robotics systems running: vision container
-            deployments, post-update checks, and hardware and software recovery
-            across automated warehouse sites. I develop Python support tools
-            and use SQL, Tableau, and Sankey data to investigate recurring faults
-            and improve recovery workflows.
+            I lead a team supporting robot teleoperations across automated
+            warehouse sites, and work with engineering teams to improve recovery
+            workflows. My background spans Linux infrastructure, software
+            deployments, Python tools, and data analysis with SQL and Tableau.
           </p>
           <ul className="space-y-3 font-sans text-sm text-body">
+            <li>Team leadership &amp; teleoperations</li>
             <li>Production deployments on Ubuntu</li>
             <li>RHEL systems administration</li>
             <li>SQL, Tableau & Sankey telemetry</li>
@@ -192,12 +203,33 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="outside-work" className="outside-work scroll-mt-24 border-t border-line py-16">
+        <SectionLabel title="Outside of work" />
+        <div className="outside-work-content">
+          <p className="max-w-2xl text-lg leading-8 text-body">
+            I enjoy staying active and looking for the next challenge, both
+            physically and mentally. I often participate in Spartan races,
+            marathons, and half marathons. When I’m looking to slow down,
+            you might find me fishing.
+          </p>
+          <div className="outside-work-tags" aria-label="Interests">
+            <span>Spartan races</span><span>Marathons</span><span>Half marathons</span><span>Fishing</span>
+          </div>
+        </div>
+      </section>
+
       <section className="contact-card mt-4 rounded-xl border border-line p-7 sm:p-10">
+        <div className="contact-orbit" aria-hidden="true"><span></span><span></span><span></span></div>
         <p className="font-sans text-xs uppercase tracking-[0.2em] text-accent">Get in touch</p>
-        <h2 className="mt-4 text-3xl font-semibold tracking-tight text-ink sm:text-4xl">Have a project in mind?</h2>
-        <a href={`mailto:${profile.email}`} className="primary-button mt-6 inline-flex items-center gap-3 rounded-md bg-accent px-5 py-3 text-sm font-medium text-cream">
-          Email me <span aria-hidden="true">↗</span>
-        </a>
+        <h2 className="mt-4 text-3xl font-semibold tracking-tight text-ink sm:text-4xl">Let’s build reliable systems.</h2>
+        <div className="mt-6 flex flex-wrap items-center gap-4">
+          <a href={`mailto:${profile.email}`} className="primary-button inline-flex items-center rounded-md bg-accent px-5 py-3 text-sm font-medium text-cream">
+            Email me
+          </a>
+          <a href={`tel:${profile.phoneHref}`} className="inline-flex min-h-11 items-center font-medium text-ink underline decoration-accent underline-offset-4 hover:text-accent">
+            {profile.phone}
+          </a>
+        </div>
       </section>
     </div>
   );

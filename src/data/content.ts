@@ -1,15 +1,17 @@
 export const profile = {
   name: "Darrian Yang",
-  title: "Robotics Infrastructure Engineer II",
+  title: "Supervisor – Robot Teleoperations",
   company: "Symbotic",
   location: "Dracut, MA",
   email: "darrianyang978@gmail.com",
+  phone: "(978) 866-1605",
+  phoneHref: "+19788661605",
   website: "https://darrianyang.com",
   github: "https://github.com/DarrianYang",
   linkedin: "https://www.linkedin.com/in/darrianyang",
   resumePath: "/resume.pdf",
   summary:
-    "Infrastructure engineer supporting distributed robotics infrastructure, production Linux environments, and software deployments to commercial customer sites. At Symbotic, I support robotic warehouse systems, troubleshoot hardware and software faults, and develop Python tools for operational recovery. Experienced with vision container deployments to Walmart sites through the MLOps Change Request process and post-deployment validation.",
+    "Engineering and technical operations professional with experience in robotics infrastructure, Linux systems, software development, and workflow automation. I supervise a team supporting robot teleoperations and lead cross-functional projects to improve robotics workflows and operational efficiency.",
 };
 
 export const nav = [
@@ -24,8 +26,20 @@ export const experience = [
   {
     company: "Symbotic",
     location: "Wilmington, MA",
+    role: "Supervisor – Robot Teleoperations",
+    dates: "August 2026 – Present",
+    bullets: [
+      "Supervise five direct reports supporting robot teleoperations across automated warehouse sites, providing guidance, coaching, and training.",
+      "Coordinate team projects and oversee daily teleoperations, scheduling, coverage, and escalations.",
+      "Lead cross-functional engineering projects to improve robotics workflows and operational efficiency.",
+      "Automate Snowflake SQL queries to deliver daily Sankey reports on robotics performance, workflow trends, and recurring failures.",
+    ],
+  },
+  {
+    company: "Symbotic",
+    location: "Wilmington, MA",
     role: "Robotics Infrastructure Engineer II",
-    dates: "August 2025 – Present",
+    dates: "August 2025 – August 2026",
     bullets: [
       "Support periodic vision container deployments to Walmart customer sites using Ubuntu Linux, Python, and shell scripts, coordinating production changes with the MLOps team through the Change Request (CR) process.",
       "Run post-deployment script checks to identify robots with failed vision container updates and review command-line logs to verify deployment results.",
@@ -79,11 +93,11 @@ export const skillGroups = [
   },
   {
     label: "Observability & telemetry",
-    items: ["SQL", "Tableau dashboards", "Sankey workflow analysis", "Cloud UI monitoring consoles"],
+    items: ["Snowflake", "SQL", "Tableau dashboards", "Sankey workflow analysis", "Cloud UI monitoring consoles"],
   },
   {
     label: "Platforms & toolsets",
-    items: ["Git", "GitHub", "Jira", "Confluence", "MySQL", "SharePoint", "Microsoft Teams"],
+    items: ["Git", "GitHub", "Jira", "Confluence", "ServiceNow", "MySQL", "SharePoint", "Microsoft Teams"],
   },
 ];
 

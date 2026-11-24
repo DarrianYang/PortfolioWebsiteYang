@@ -1,5 +1,4 @@
 import { profile } from "@/data/content";
-import { AutumnLeaves } from "@/components/autumn-leaves";
 
 export function SiteFooter() {
   return (
@@ -8,7 +7,7 @@ export function SiteFooter() {
         <p>
           © {new Date().getFullYear()} {profile.name}
         </p>
-        <AutumnLeaves />
+        <p>Robotics · Systems · Operations</p>
       </div>
     </footer>
   );
