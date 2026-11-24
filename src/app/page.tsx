@@ -23,9 +23,9 @@ export default function Home() {
             {profile.name}
           </h1>
           <p className="hero-role mt-4 text-lg sm:text-xl">{profile.title} <span>at {profile.company}</span></p>
-          <p className="mt-6 max-w-2xl text-base leading-7 text-body sm:text-lg">
-            {profile.summary}
-          </p>
+          <div className="mt-6 max-w-2xl space-y-4 text-base leading-7 text-body sm:text-lg">
+            {profile.intro.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+          </div>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
               href="/resume/"
@@ -87,20 +87,31 @@ export default function Home() {
       <section id="about" className="scroll-mt-24 border-t border-line py-16">
         <SectionLabel title="About" />
         <div className="grid gap-8 lg:grid-cols-3">
-          <p className="text-lg leading-8 text-body lg:col-span-2">
-            I supervise five direct reports within a larger teleoperations
-            team that supports customer sites around the clock. Across the team,
-            I coordinate procedures, scheduling, and training, and help us keep
-            improving how we work. Together, we work to keep robots healthy and
-            processing transactions so customers can meet their needs and site
-            quotas. I also help develop and support our internal teleoperations
-            application and contribute to new projects. Working with these
-            systems has given me a strong
-            understanding of warehouse logistics, from how products and SKUs
-            are handled and placed to how goods move through inbound and
-            outbound operations. My background also includes Linux systems,
-            software deployments, Python tools, and data analysis.
-          </p>
+          <div className="space-y-5 text-lg leading-8 text-body lg:col-span-2">
+            <p>
+              I’m a Robot Teleoperations Supervisor with a background in robotics
+              infrastructure, systems engineering, and automation.
+            </p>
+            <p>
+              I lead five direct reports within a larger teleoperations team
+              providing 24/7 robotics support to automated warehouse customer
+              sites. Across the broader team, I oversee operational procedures,
+              scheduling, and training, and work to improve performance, robot
+              reliability, and customer support.
+            </p>
+            <p>
+              Beyond team leadership, I contribute to internal application
+              development, process automation, data-driven reporting, and
+              cross-functional engineering projects that improve operations.
+            </p>
+            <p>
+              My technical background spans robotics infrastructure, warehouse
+              automation and logistics, Linux systems, software development, and
+              data analytics. I’m passionate about connecting engineering and
+              operational leadership, solving technical challenges, and helping
+              teams grow through continuous improvement.
+            </p>
+          </div>
           <ul className="space-y-3 font-sans text-sm text-body">
             <li>Team leadership &amp; teleoperations</li>
             <li>Warehouse logistics &amp; SKU handling</li>

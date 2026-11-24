@@ -11,7 +11,12 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/darrianyang",
   resumePath: "/resume.pdf",
   summary:
-    "I supervise five direct reports within a larger robot teleoperations team providing 24/7 support to automated warehouse customer sites. I coordinate procedures, scheduling, and training across the team, helping meet customer needs while continuously improving operations. I also help develop and support our internal application and contribute to new projects. My background spans robotics infrastructure, warehouse logistics, Linux systems, and automation.",
+    "Robot Teleoperations Supervisor with a background in robotics infrastructure, systems engineering, and automation. I lead five direct reports within a larger team providing 24/7 support to automated warehouse customer sites.",
+  intro: [
+    "I’m a Robot Teleoperations Supervisor with a background in robotics infrastructure, systems engineering, and automation.",
+    "I lead five direct reports within a larger team providing 24/7 robotics support to automated warehouse customer sites. Across the broader team, I coordinate procedures, scheduling, and training while helping improve robot reliability and meet customer needs.",
+    "I also contribute to internal application development, automation, reporting, and cross-functional engineering projects.",
+  ],
 };
 
 export const nav = [
