@@ -11,7 +11,7 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/darrianyang",
   resumePath: "/resume.pdf",
   summary:
-    "Engineering and technical operations professional with experience in robotics infrastructure, Linux systems, software development, and workflow automation. I supervise a team supporting robot teleoperations and lead cross-functional projects to improve robotics workflows and operational efficiency.",
+    "I supervise five direct reports within a larger robot teleoperations team providing 24/7 support to automated warehouse customer sites. I coordinate procedures, scheduling, and training across the team, helping meet customer needs while continuously improving operations. I also help develop and support our internal application and contribute to new projects. My background spans robotics infrastructure, warehouse logistics, Linux systems, and automation.",
 };
 
 export const nav = [
@@ -29,9 +29,11 @@ export const experience = [
     role: "Supervisor – Robot Teleoperations",
     dates: "August 2026 – Present",
     bullets: [
-      "Supervise five direct reports supporting robot teleoperations across automated warehouse sites, providing guidance, coaching, and training.",
-      "Coordinate team projects and oversee daily teleoperations, scheduling, coverage, and escalations.",
-      "Lead cross-functional engineering projects to improve robotics workflows and operational efficiency.",
+      "Supervise five direct reports, providing guidance, coaching, and development as part of a larger 24/7 robot teleoperations team.",
+      "Coordinate teleoperations procedures, scheduling, coverage, and training across the broader team to support consistent 24/7 operations.",
+      "Support customer needs by helping keep robots healthy and processing transactions so sites can meet their quotas; apply knowledge of SKU handling, product placement, and inbound and outbound warehouse operations when troubleshooting.",
+      "Help develop and support the internal teleoperations application, and actively contribute to new projects and improvements to robotics workflows.",
+      "Lead cross-functional projects and encourage continuous improvement in team performance and operational efficiency.",
       "Automate Snowflake SQL queries to deliver daily Sankey reports on robotics performance, workflow trends, and recurring failures.",
     ],
   },
@@ -75,6 +77,10 @@ export const experience = [
 ];
 
 export const skillGroups = [
+  {
+    label: "Warehouse & logistics operations",
+    items: ["Automated warehouse systems", "SKU handling", "Product placement", "Inbound & outbound operations", "Robotics operations"],
+  },
   {
     label: "Systems & OS administration",
     items: ["Ubuntu Linux", "RHEL 8/9", "CentOS", "Windows", "SSH", "System monitoring"],

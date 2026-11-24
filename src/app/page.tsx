@@ -81,20 +81,29 @@ export default function Home() {
         </svg>
       </div>
       <div className="focus-ribbon" aria-label="Areas of focus">
-        <span>01 <b>Robotics infrastructure</b></span><span>02 <b>Linux systems</b></span><span>03 <b>Operational leadership</b></span><span>04 <b>Automation &amp; tooling</b></span>
+        <span>01 <b>Robotics infrastructure</b></span><span>02 <b>Linux systems</b></span><span>03 <b>Warehouse &amp; logistics</b></span><span>04 <b>Automation &amp; tooling</b></span>
       </div>
 
       <section id="about" className="scroll-mt-24 border-t border-line py-16">
         <SectionLabel title="About" />
         <div className="grid gap-8 lg:grid-cols-3">
           <p className="text-lg leading-8 text-body lg:col-span-2">
-            I lead a team supporting robot teleoperations across automated
-            warehouse sites, and work with engineering teams to improve recovery
-            workflows. My background spans Linux infrastructure, software
-            deployments, Python tools, and data analysis with SQL and Tableau.
+            I supervise five direct reports within a larger teleoperations
+            team that supports customer sites around the clock. Across the team,
+            I coordinate procedures, scheduling, and training, and help us keep
+            improving how we work. Together, we work to keep robots healthy and
+            processing transactions so customers can meet their needs and site
+            quotas. I also help develop and support our internal teleoperations
+            application and contribute to new projects. Working with these
+            systems has given me a strong
+            understanding of warehouse logistics, from how products and SKUs
+            are handled and placed to how goods move through inbound and
+            outbound operations. My background also includes Linux systems,
+            software deployments, Python tools, and data analysis.
           </p>
           <ul className="space-y-3 font-sans text-sm text-body">
             <li>Team leadership &amp; teleoperations</li>
+            <li>Warehouse logistics &amp; SKU handling</li>
             <li>Production deployments on Ubuntu</li>
             <li>RHEL systems administration</li>
             <li>SQL, Tableau & Sankey telemetry</li>
